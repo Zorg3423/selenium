@@ -1,0 +1,47 @@
+| №  | Описание                              | XPath                                    | CSS                                                   |
+| -- | ------------------------------------- | ---------------------------------------- | ----------------------------------------------------- |
+| 1  | Глобальный поиск по тегу              | //header                                 | header                                                |
+| 2  | Прямой потомок                        | //header/div                             | header > div                                          |
+| 3  | Любой потомок (не обязательно прямой) | //header//div                            | header div                                            |
+| 4  | Порядковый элемент                    | (//header/div)[2]                        | header div:nth-of-type(2)                             |
+| 5  | Первый элемент                        | (//header/div)[1]                        | header div:first-of-type                              |
+| 6  | Последний элемент                     | (//header/div)[last()]                   | header div:last-of-type                               |
+| 7  | Поиск по атрибуту                     | //input[@type='submit']                  | input[type='submit']                                  |
+| 8  | Поиск по содержимому атрибута         | //button[contains(@class, 'btn')]        | button[class*='btn']                                  |
+| 9  | Начало/конец значения атрибута        | —                                        | button[class^='btn'] / button[class$='btn']           |
+| 10 | Поиск по нескольким атрибутам         | //input[@type='email' and @role='login'] | input[type='email'][role='login']                     |
+| 11 | Поиск по тексту                       | //button[text()='Sign in']               | jQuery: button:contains('Sign in') (в чистом CSS нет) |
+| 12 | Не элемент                            | //div[not(@class='active')]              | div:not(.active)                                      |
+| 13 | Чётные/нечётные элементы              | —                                        | li:nth-child(even) / li:nth-child(odd)                |
+| 14 | Класс                                 | //*[@class='btn']                        | .btn                                                  |
+| 15 | Несколько классов                     | //*[@class='btn primary']                | .btn.primary                                          |
+| 16 | Id                                    | //*[@id='login']                         | #login                                                |
+| 17 | Комбинация (вложенность + класс)      | //header//div[@class='btn']              | header .btn                                           |
+| 18 | Прямой потомок + класс                | //header/div[@class='btn']               | header > .btn                                         |
+
+
+
+
+| XPath                                    | CSS                                | Подсказка                    |
+| ---------------------------------------- | ---------------------------------- | ---------------------------- |
+| //header                                 | header                             | По тегу                      |
+| //header/div                             | header > div                       | Прямой потомок               |
+| //header//div                            | header div                         | Любой потомок                |
+| (//header/div)[2]                        | header div:nth-of-type(2)          | Порядковый элемент           |
+| (//header/div)[1]                        | header div:first-of-type           | Первый элемент               |
+| (//header/div)[last()]                   | header div:last-of-type            | Последний элемент            |
+| //input[@type='submit']                  | input[type='submit']               | По атрибуту                  |
+| //button[contains(@class, 'btn')]        | button[class*='btn']               | Атрибут содержит текст       |
+| //input[@type='email' and @role='login'] | input[type='email'][role='login']  | Несколько атрибутов          |
+| //button[text()='Sign in']               | jQuery: button:contains('Sign in') | По тексту (в чистом CSS нет) |
+| //div[not(@class='active')]              | div:not(.active)                   | Не элемент                   |
+| li:nth-child(even)                       | li:nth-child(even)                 | Чётные элементы              |
+| li:nth-child(odd)                        | li:nth-child(odd)                  | Нечётные элементы            |
+| //*[@class='btn']                        | .btn                               | По классу                    |
+| //*[@class='btn primary']                | .btn.primary                       | Несколько классов            |
+| //*[@id='login']                         | #login                             | По id                        |
+| //header//div[@class='btn']              | header .btn                        | Вложенность + класс          |
+| //header/div[@class='btn']               | header > .btn                      | Прямой потомок + класс       |
+
+
+
