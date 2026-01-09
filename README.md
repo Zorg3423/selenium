@@ -1,4 +1,4 @@
-# Selenium UI Automation Tests (Python)
+# Selenium UI (Python)
 
 Учебный проект по автоматизации UI-тестирования с использованием **Python + Selenium**.
 
