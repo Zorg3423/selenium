@@ -5,4 +5,3 @@
 ## 🛠 Используемый стек
 - Python
 - Selenium WebDriver
-- Page Object Model (POM)
